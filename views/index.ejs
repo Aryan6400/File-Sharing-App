@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShariFy</title>
+</head>
+
+<body>
+    <form action="/upload" method="POST" enctype="multipart/form-data" style="display:grid; gap: 1rem; grid-template-columns: auto 1fr; max-width: 350px; margin: 75px auto;">
+        <label for="file">Upload your file here:</label>
+        <input type="file" name="file" id="file">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <button style="color: white; background-color: blue; border-radius: 5px; font-size: 1rem; border: none;" type="submit" class="btn">Share</button>
+    </form>
+    <% if(filelink!=null){ %>
+        <div style="max-width: 60%; margin: 50px auto; text-align: center; font-size: 1.2rem;">
+            Your file is uploaded: 
+            <a href="<%= filelink %>"><%= filelink %></a>
+        </div>
+    <% } %>
+    <div>
+
+    </div>
+</body>
+
+</html>
